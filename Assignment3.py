@@ -78,3 +78,10 @@ plt.scatter(x, y, color='red')
 plt.text(np.round(x,4), np.round(y,4), (np.round(x,4), np.round(y,4)),ha='left',va='bottom',fontsize=10)
 plt.show()
 print(RandomPortfolios.iloc[min_index])
+
+# test data set
+optimal_portfolio = RandomPortfolios.iloc[min_index,:10]
+optimal_portfolio = optimal_portfolio.to_list()
+mean_return_test = daily_returns_test.mul(optimal_portfolio, axis=1).sum(axis=1).mean()
+annual_return_test = (1 + mean_return_test)**252-1
+print("Annual return of test data", annual_return_test)
