@@ -14,3 +14,6 @@
 603501.SH_weight    0.053656
 Returns             0.206750
 Volatility          0.170067
+
+annual_return_test
+0.213312467730995
